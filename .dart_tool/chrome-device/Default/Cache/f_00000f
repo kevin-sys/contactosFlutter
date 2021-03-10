@@ -1,0 +1,362 @@
+define(['dart_sdk', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/step2/contact_data.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/material/circle_avatar.dart'], (function load__packages__step2__contact_view_dart(dart_sdk, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__step2__contact_data$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__material__circle_avatar$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const list_tile = packages__flutter__src__material__icon_button$46dart.src__material__list_tile;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const contact_data = packages__step2__contact_data$46dart.contact_data;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const circle_avatar = packages__flutter__src__material__circle_avatar$46dart.src__material__circle_avatar;
+  var contact_view = Object.create(dart.library);
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    _ContactListItemL: () => (T._ContactListItemL = dart.constFn(dart.legacy(contact_view._ContactListItem)))(),
+    ContactL: () => (T.ContactL = dart.constFn(dart.legacy(contact_data.Contact)))(),
+    ContactLTo_ContactListItemL: () => (T.ContactLTo_ContactListItemL = dart.constFn(dart.fnType(T._ContactListItemL(), [T.ContactL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 23,
+        [_Location_line]: 9,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 9,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 11,
+        [_Location_line]: 9,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 8,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_contacts",
+        [_Location_column]: 27,
+        [_Location_line]: 11,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 11,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 9,
+        [_Location_line]: 8,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 9,
+        [_Location_line]: 11,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([C[11] || CT.C11, C[12] || CT.C12], T._LocationL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 7,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 22,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "contact",
+        [_Location_column]: 56,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 33,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22], T._LocationL());
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 35,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 36,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 36,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 63,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 42,
+        [_Location_line]: 37,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 35,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.constList([C[31] || CT.C31], T._LocationL());
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[30] || CT.C30,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 37,
+        [_Location_file]: "file:///C:/Users/kevin/Documents/Universidad/Programaci%C3%B3n%20Movil/Flutter-StepByStep-master/Flutter-StepByStep-master/step2/lib/contact_view.dart"
+      });
+    }
+  }, false);
+  var C = Array(32).fill(void 0);
+  var I = ["package:step2/contact_view.dart"];
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  contact_view.ContactsPage = class ContactsPage extends framework.StatelessWidget {
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: new text.Text.new("Contacts", {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), body: new contact_view.ContactList.new(contact_data.kContacts, {$creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), $creationLocationd_0dea112b090073317d4: C[9] || CT.C9});
+    }
+  };
+  (contact_view.ContactsPage.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    contact_view.ContactsPage.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = contact_view.ContactsPage.prototype;
+  dart.addTypeTests(contact_view.ContactsPage);
+  dart.addTypeCaches(contact_view.ContactsPage);
+  dart.setMethodSignature(contact_view.ContactsPage, () => ({
+    __proto__: dart.getMethods(contact_view.ContactsPage.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(contact_view.ContactsPage, I[0]);
+  var _contacts$ = dart.privateName(contact_view, "_contacts");
+  var _buildContactList = dart.privateName(contact_view, "_buildContactList");
+  contact_view.ContactList = class ContactList extends framework.StatelessWidget {
+    build(context) {
+      return new scroll_view.ListView.new({padding: new edge_insets.EdgeInsets.symmetric({vertical: 8.0}), children: this[_buildContactList](), $creationLocationd_0dea112b090073317d4: C[13] || CT.C13});
+    }
+    [_buildContactList]() {
+      return this[_contacts$][$map](T._ContactListItemL(), dart.fn(contact => new contact_view._ContactListItem.new(contact, {$creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), T.ContactLTo_ContactListItemL()))[$toList]();
+    }
+  };
+  (contact_view.ContactList.new = function(_contacts, opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[_contacts$] = _contacts;
+    contact_view.ContactList.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = contact_view.ContactList.prototype;
+  dart.addTypeTests(contact_view.ContactList);
+  dart.addTypeCaches(contact_view.ContactList);
+  dart.setMethodSignature(contact_view.ContactList, () => ({
+    __proto__: dart.getMethods(contact_view.ContactList.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_buildContactList]: dart.fnType(dart.legacy(core.List$(dart.legacy(contact_view._ContactListItem))), [])
+  }));
+  dart.setLibraryUri(contact_view.ContactList, I[0]);
+  dart.setFieldSignature(contact_view.ContactList, () => ({
+    __proto__: dart.getFields(contact_view.ContactList.__proto__),
+    [_contacts$]: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(contact_data.Contact))))
+  }));
+  contact_view._ContactListItem = class _ContactListItem extends list_tile.ListTile {};
+  (contact_view._ContactListItem.new = function(contact, opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    contact_view._ContactListItem.__proto__.new.call(this, {title: new text.Text.new(contact.fullName, {$creationLocationd_0dea112b090073317d4: C[20] || CT.C20}), subtitle: new text.Text.new(contact.email, {$creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), leading: new circle_avatar.CircleAvatar.new({child: new text.Text.new(contact.fullName[$_get](0), {$creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), $creationLocationd_0dea112b090073317d4: C[29] || CT.C29}), $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = contact_view._ContactListItem.prototype;
+  dart.addTypeTests(contact_view._ContactListItem);
+  dart.addTypeCaches(contact_view._ContactListItem);
+  dart.setLibraryUri(contact_view._ContactListItem, I[0]);
+  dart.trackLibraries("packages/step2/contact_view.dart", {
+    "package:step2/contact_view.dart": contact_view
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["contact_view.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAK4B;AACxB,YAAO,oCACK,+BACC,kBAAK,qIAER,iCAAY;IACxB;;;;;;EACF;;;;;;;;;;;UAQ4B;AACxB,YAAO,wCACiB,gDAAoB,iBAC9B;IAChB;;AAGE,YAAO,AAAU,AAA4C,+CAAxC,QAAC,WAAY,sCAAiB,OAAO;IAC5D;;2CAXiB;;;AAAjB;;EAA2B;;;;;;;;;;;;;;gDAeF;;AACnB,mEACW,kBAAK,AAAQ,OAAD,iFACT,kBAAK,AAAQ,OAAD,6EACb,2CAAoB,kBAAK,AAAQ,AAAQ,OAAT,iBAAU;;EAAK","file":"../../../../../../../../../packages/step2/contact_view.dart.lib.js"}');
+  // Exports:
+  return {
+    contact_view: contact_view
+  };
+}));
+
+//# sourceMappingURL=contact_view.dart.lib.js.map
